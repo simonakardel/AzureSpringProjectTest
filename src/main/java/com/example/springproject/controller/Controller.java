@@ -1,16 +1,16 @@
-package controller;
+package com.example.springproject.controller;
 
-import model.Student;
+import com.example.springproject.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import repo.Repository;
+import com.example.springproject.repo.Repository;
 
 import java.util.List;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(value = "*")
 public class Controller {
 
     @Autowired Repository repository;
