@@ -12,14 +12,13 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/")
 public class Controller {
 
     @Autowired
     Repository repository;
 
 
-    @GetMapping
+    @GetMapping("/")
     public List<Student> students() {
         return repository.findAll();
     }
