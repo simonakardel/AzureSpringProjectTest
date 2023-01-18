@@ -4,7 +4,6 @@ import model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import repo.Repository;
 
@@ -14,9 +13,14 @@ import java.util.List;
 @CrossOrigin
 public class Controller {
 
-    @Autowired
-    Repository repository;
+    @Autowired Repository repository;
 
+    @GetMapping("/test")
+    public Student kurt() {
+        Student std = new Student();
+        std.setName("test");
+        return std;
+    }
 
     @GetMapping("/")
     public List<Student> students() {
