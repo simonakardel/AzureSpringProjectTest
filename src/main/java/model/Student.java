@@ -1,11 +1,14 @@
 package model;
 
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
+import lombok.*;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
+@NoArgsConstructor
 public class Student {
 
     @Id
